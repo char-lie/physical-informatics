@@ -30,11 +30,12 @@ class Memristor:
 
         indices = (values >= self.__D) | (values <= 0)
         if not indices.any():
-            print('alright')
             return values
         const_index = np.where(indices)[0][0]
         const_value = values[const_index]
-        values[const_index:] = self.__D if const_value >= self.__D else 0.0
+        values[values >= self.__D] = self.__D
+        values[values <= 0] = 0
+        # values[const_index:] = self.__D if const_value >= self.__D else 0.0
         return values
 
     def I(self, t):
