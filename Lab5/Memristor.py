@@ -59,12 +59,12 @@ class Memristor:
 
         f, axarr = plt.subplots(3, sharex=True)
 
-        for ax in axarr:
-            ax.axvline((1 / self.__nu), linewidth=2, color='r', linestyle=':')
+        # for ax in axarr:
+        #     ax.axvline((1 / self.__nu), linewidth=2, color='r', linestyle=':')
 
         axarr[0].set_title(r'$\frac{\omega\left( t \right)}{D}$')
         axarr[0].plot(TIME, self.w(TIME) / self.__D)
-        axarr[0].axhline(1, linewidth=2, color='r', linestyle=':')
+        # axarr[0].axhline(1, linewidth=2, color='r', linestyle=':')
         axarr[0].set_ylabel(r'$\frac{\omega}{D}$')
 
         axarr[1].set_title(r'$I\left( t \right)$')
