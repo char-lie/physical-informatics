@@ -28,13 +28,13 @@ class Memristor:
         up = up_sqrt**.5 - self.__R_OFF
         values = self.__D * up / (self.__R_ON - self.__R_OFF)
 
-        indices = (values >= self.__D) | (values <= 0)
-        if not indices.any():
-            return values
-        const_index = np.where(indices)[0][0]
-        const_value = values[const_index]
         values[values >= self.__D] = self.__D
         values[values <= 0] = 0
+        # indices = (values >= self.__D) | (values <= 0)
+        # if not indices.any():
+        #     return values
+        # const_index = np.where(indices)[0][0]
+        # const_value = values[const_index]
         # values[const_index:] = self.__D if const_value >= self.__D else 0.0
         return values
 
