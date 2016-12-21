@@ -1,14 +1,13 @@
 import numpy as np
 
 class Memristor:
-    def __init__(self, D, mu, nu, w0, R_ON, R_OFF, U0, U, Phi):
+    def __init__(self, D, mu, nu, w0, R_ON, R_OFF, U, Phi):
         self.__D = D
         self.__mu = mu
         self.__nu = nu
         self.__w0 = w0
         self.__R_ON = R_ON
         self.__R_OFF = R_OFF
-        self.__U0 = U0
 
         self.U = U
         self.Phi = Phi
