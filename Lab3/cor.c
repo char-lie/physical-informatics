@@ -14,7 +14,7 @@ int cor(int r, double* x, int n) {
             }
         }
     }
-    return result * 2;
+    return result;
 }
 
 int cor2(int r, double* x, double* y, int n) {
@@ -32,7 +32,7 @@ int cor2(int r, double* x, double* y, int n) {
             }
         }
     }
-    return result * 2;
+    return result;
 }
 
 int cor3(int r, double* x, double* y, double* z, int n) {
@@ -45,10 +45,11 @@ int cor3(int r, double* x, double* y, double* z, int n) {
         while (j --> 0) {
             dx = (x[i] - x[j]);
             dy = (y[i] - y[j]);
+            dz = (z[i] - z[j]);
             if (r > sqrt(dx*dx + dy*dy + dz*dz)) {
                 result ++;
             }
         }
     }
-    return result * 2;
+    return result;
 }
